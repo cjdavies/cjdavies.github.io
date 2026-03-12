@@ -1,45 +1,242 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js" lang="en">
-<!--<![endif]-->
-
+<!-- Copyright (c) 2026 Colin Davies All rights reserved. -->
+<!-- Licensed under the MIT License. -->
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://unpkg.com/primitive-ui/dist/css/main.css">
-    <link rel="stylesheet" href="css/main.css">
-    <title>Home Page</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Colin Davies | Data Architect</title>
+
+<style>
+:root {
+    --bg: #0f172a;
+    --card: #1e293b;
+    --accent: #38bdf8;
+    --accent2: #818cf8;
+    --text: #e2e8f0;
+    --muted: #94a3b8;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* ===== HERO ===== */
+.hero {
+    padding: 100px 0 80px;
+    text-align: center;
+    background: radial-gradient(circle at top left, #1e293b, #0f172a);
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    color: var(--muted);
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.highlight {
+    background: linear-gradient(90deg, var(--accent), var(--accent2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.button-group a {
+    display: inline-block;
+    padding: 12px 22px;
+    margin: 8px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, var(--accent), var(--accent2));
+    color: #fff;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(56,189,248,0.3);
+}
+
+.btn-secondary {
+    border: 1px solid var(--accent);
+    color: var(--accent);
+}
+
+.btn-secondary:hover {
+    background: var(--accent);
+    color: #fff;
+}
+
+/* ===== SECTIONS ===== */
+section {
+    padding: 70px 0;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+}
+
+/* ===== CARD ===== */
+.card {
+    background: var(--card);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* ===== GRID ===== */
+.grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill {
+    background: rgba(56,189,248,0.1);
+    border: 1px solid rgba(56,189,248,0.3);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+/* ===== LINKS ===== */
+.links a {
+    display: block;
+    color: var(--accent);
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+.links a:hover {
+    color: #fff;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 40px 0;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
 </head>
 
 <body>
-    <h1>Colin Davies - Home Page</h1>
-    <div class="column1of2">
-        <h3>About</h3>
-        <p>I am an Enterprise Architect working in the aerospace industry. I have been employed in the business of
-            building software applications for a very long time. I have programmed in more languages than I can remember
-            on numerous computers and operating systems. I am a "data wonk" who has focused on databases, business
-            intelligence, and analytics for the last 20+ years.</p>
-        <p>One of my recent projects involved data integration between an externally hosted application and an
-            internally hosted application using Apache Kafka as the transport mechanism. It turned out to be very
-            interesting and quite challenging</p>
-        <h3>Professional Interests</h3>
-        <li>Data Architecture, Data Integration, Data Engineering</li>
-        <li>Analytics, Data Science, Knowledge Graphs, AI, Python</li>
-        <h3>Personal Interests</h3>
-        <li>Science, History, Travel, Food, Music, The Great Outdoors</li>
-    </div>
-    <div class="column2of2">
-        <h3>Links</h3>
-        <ul>
-            <li><a href="http://github.com/cjdavies">My GitHub profile</a></li>
-            <li><a href="http://www.linkedin.com/in/colindavies">My LinkedIn profile</a></li>
-        </ul>
-    </div>
-</body>
 
+<!-- HERO -->
+<div class="hero">
+    <div class="container">
+        <h1>Colin Davies</h1>
+        <p>
+            <span class="highlight">Data Architect</span> specializing in 
+            SQL Server, Data Engineering, and Analytics
+        </p>
+
+        <div class="button-group">
+            <a href="https://github.com/cjdavies" class="btn-primary" target="_blank">View GitHub</a>
+            <a href="https://www.linkedin.com/in/colindavies" class="btn-secondary" target="_blank">Connect on LinkedIn</a>
+        </div>
+    </div>
+</div>
+
+<!-- ABOUT -->
+<section>
+    <div class="container grid">
+
+        <div class="card">
+            <h2 class="section-title">About Me</h2>
+            <p>
+                I am a Database Architect  specializing in Microsoft SQL Server and Oracle. I have more than 20 years of experience designing, building, and optimizing data-driven systems. My work spans data architecture,
+                integration pipelines, analytics platforms, and distributed systems.
+            </p>
+            <p>
+                As a dedicated “data wonk,” my focus for the past 20+ years has been databases, business intelligence, 
+                analytics, and data architecture. One of my recent projects involved designing a data integration 
+                pipeline between externally and internally hosted applications using Apache Kafka as the transport 
+                mechanism — a challenging and highly rewarding experience.
+            </p>
+
+        </div>
+
+        <div class="card">
+            <h2 class="section-title">Core Skills</h2>
+            <div class="skills">
+                <div class="skill">SQL Server</div>
+                <div class="skill">Oracle</div>
+                <div class="skill">Data Architecture</div>
+                <div class="skill">Data Engineering</div>
+                <div class="skill">Business Analytics</div>
+                <div class="skill">SQL</div>
+                <div class="skill">Power BI</div>
+                <div class="skill">Python</div>
+                <div class="skill">R</div>
+                <div class="skill">Apache Kafka</div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- INTERESTS -->
+<section>
+    <div class="container">
+        <div class="card">
+            <h2 class="section-title">Beyond Work</h2>
+            <p>
+                Outside of technology, I enjoy science, history, travel, food, music,
+                and exploring the great outdoors.
+            </p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    © 2026 Colin Davies | 
+</footer>
+
+</body>
 </html>
